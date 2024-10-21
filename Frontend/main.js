@@ -1,8 +1,9 @@
 (function startApp() {
+  const BASE_URL = "http://localhost:10000";
   const TaskService = {
     getAll: function () {
       $.ajax({
-        url: "http://localhost:10000/api/tasks/getalltasks",
+        url: BASE_URL + "/api/tasks/getalltasks",
         type: "GET",
         success: function (response) {
           const todoList = response.filter((task) => task.status === "todo");
@@ -34,7 +35,7 @@
     },
     updateTask: function (id, updatedData, showAlert = true) {
       $.ajax({
-        url: `http://localhost:10000/api/tasks/update?id=${id}`,
+        url: BASE_URL + `/api/tasks/update?id=${id}`,
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(updatedData),
@@ -50,7 +51,7 @@
     },
     deleteTask: function (id) {
       $.ajax({
-        url: `http://localhost:10000/api/tasks/delete?id=${id}`,
+        url: BASE_URL + `/api/tasks/delete?id=${id}`,
         type: "DELETE",
         success: function () {
           closePopup();
@@ -61,7 +62,7 @@
     },
     createTask: function (newTaskData) {
       $.ajax({
-        url: "http://localhost:10000/api/tasks/create",
+        url: BASE_URL + "/api/tasks/create",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(newTaskData),
