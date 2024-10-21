@@ -27,3 +27,5 @@ https://www.loom.com/share/81ce838853034f5ea01305a1fcdfd53b?sid=96347250-02b3-49
 
 
 # You're all set!
+
+![image](https://github.com/user-attachments/assets/43908ec6-b00c-4626-b316-20ae525e48f8)
